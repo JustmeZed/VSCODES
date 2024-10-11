@@ -1,0 +1,139 @@
+/*This feature means that it will apply to all*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+/*To edit the body*/
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(bg.jpg);
+    background-size: cover;
+    background-position: center;
+}
+/*To edit the div Main where it is the login box*/
+.Main{
+    position: relative;
+    width: 420px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(75px);
+    color: white;
+    border-radius: 12px;
+    padding: 30px 40px;
+}
+/*To edit the heading "Login" */
+.Main h1{
+    font-size: 36px;
+    text-align: center;
+}
+/*To edit the div class input box*/
+.Main .input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+/*To edit the input box in email, password, preferred username */
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    color: white;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    padding: 20px 45px 20px 20px;
+}
+/*To change the placeholder color*/
+.input-box input::placeholder{
+    color: white;
+}
+/*To edit the Remember Me and forgot Password*/
+.Main .remember-forgot{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: -15px 0 15px;
+}
+/*To edit the checkbox*/
+.remember-forgot label input {
+    accent-color: white;
+    margin: 3px;
+}
+/*To edit the forgot password*/
+.remember-forgot a{
+    color:white;
+    text-decoration: none;
+}
+/*To edit the forgot password when you put your cursor*/
+.remember-forgot a:hover{
+    text-decoration: underline;
+    color:aqua;
+}
+/*To edit the button*/
+.Main .btn{
+    background: #2c526f;
+    width: 100%;
+    height: 45px;
+    border: none;
+    outline:none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+    font-weight: 600;
+}
+/*To edit the button when you put your cursor*/
+.Main .btn:hover{
+    color: aqua;
+}
+/*To edit the "Dont have an account?"*/
+.Main .login-register{
+    font-size: 14.5px;
+    text-align: center;
+    margin: 20px 0 15px;
+}
+/*To edit the "Register"*/
+.login-register p a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+/*To edit the register when you put your cursor*/
+.login-register a:hover{
+    text-decoration: underline;
+    color: aqua;
+}
+/* For the log in with*/
+.liw{
+    padding-top: 20px;
+    padding-bottom: 5px;
+    text-align: center;
+    font-weight:500;
+}
+/*For Icons to make it white*/
+.icons a{
+    text-decoration: none;
+    color: white;
+}
+
+/*For the position of Icons*/
+.icons ion-icon{
+    position: center;
+    margin: 8px;
+    color: white;
+    font-size: 30px;
+    padding-left: 15px;
+    transition: .3s ease;
+}
+/*To hover the icons*/
+.icons ion-icon:hover{
+    color: aqua;
+}
