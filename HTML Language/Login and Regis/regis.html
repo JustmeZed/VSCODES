@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale = 1.0">
+        <title>Register</title>
+        <link rel="stylesheet" href="regis.css"> 
+    </head>
+
+    <body>
+        <div class="Main">
+            <form action="">
+                <h1>Registration</h1>
+
+                <div class="input-box">
+                    <div class="input-field">
+                        <span class="details">First Name</span>
+                        <input type="text" placeholder="Enter your First Name" required>
+                    </div>
+
+                    <div class="input-field">
+                        <span class="details">Last Name</span>
+                        <input type="text" placeholder="Enter your Last Name" required>
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <div class="input-field">
+                        <span class="details">Email</span>
+                        <input type="email" placeholder="Enter your Email" required>
+                    </div>
+
+                    <div class="input-field">
+                        <span class="details">Username</span>
+                        <input type="text" placeholder="Enter your Username" required>
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <div class="input-field">
+                        <span class="details">Birthdate</span>
+                        <input type="date" placeholder="Enter your Birthdate" required>
+                    </div>
+
+                    <div class="input-field">
+                        <span class="details">Phone Number</span>
+                        <input type="number" placeholder="Enter your Phone Number" required>
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <div class="input-field address-field">
+                        <span class="details">Address</span>
+                        <input type="text" placeholder="Enter your Full Address" required>
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <div class="input-field">
+                        <span class="details">Password</span>
+                        <input type="password" placeholder="Enter Password" minlength="6" required>
+                    </div>
+
+                    <div class="input-field">
+                        <span class="details">Confirm Password</span>
+                        <input type="password" placeholder="Confirm Password" minlength="6" required>
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <div class="gender-details">
+                        <input type="radio" name="gender" id="dot-1">
+                        <input type="radio" name="gender" id="dot-2">
+                        <input type="radio" name="gender" id="dot-3">
+                        <span class="gender-title">Sex</span>
+                        <div class="category">
+                            <label for="dot-1">
+                                <span class="dot one"></span>
+                                <span class="gender">Male</span>
+                            </label>
+                            <label for="dot-2">
+                                <span class="dot two"></span>
+                                <span class="gender">Female</span>
+                            </label>
+                            <label for="dot-3">
+                                <span class="dot three"></span>
+                                <span class="gender">Prefer not to say</span>
+                            </label>
+                        </div>
+                    </div>
+
+                </div>
+
+                <label><input type="checkbox" required>I hereby declare that the information provided are true and correct</label>
+
+                <button type="submit" class="btn">Register</button>
+
+                <div class="login-register">
+                    <p>Already have an account? <a href="login.html" class="login-link">Login</a>
+                    </p>
+                    <p class="riw">Or Register with</p>
+                </div>
+                
+                <div class="icons">
+                    <a href="https://www.facebook.com" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a>
+                    <a href="https://www.instagram.com" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a>
+                    <a href="https://x.com" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a>
+                    <a href="https://accounts.google.com" target="_blank"><ion-icon name="logo-google"></ion-icon></a>
+                    <a href="https://account.apple.com" target="_blank"><ion-icon name="logo-apple"></ion-icon></a>
+
+                </div>
+            
+            </form>
+        </div>
+        <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    </body>
+</html>
