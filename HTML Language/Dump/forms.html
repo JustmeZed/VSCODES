@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Personal Form</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body style="background-color: teal;">
+    <h1>Information Sheet</h1>
+                                            <!--If you will use large file such as image, use this enctype-->
+    <form action="index.php" method="POST" enctype="multipart/form-data">
+        
+        <label for="username">Username:</label>
+        <input type="text" id="username" placeholder="ex: Zedric" minlength="6" required>
+        <!--for and id will help us if we click the username,
+        it will go to textbox-->
+
+        <br><br> <!--Break Row-->
+
+        <!--To create Password-->
+        <label for="password">Password: </label>
+        <input type="password" id="password" minlength="6" required>
+
+        <br><br>
+        <!--To create Email-->
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="@gmail.com" required>
+
+        <br><br>
+        <!--To create Phone Number-->
+        <label for="Phone">Phone No.</label>
+        <input type="tel" id="phone" placeholder="0999-999-9999"pattern="[0-9]{4}-[0-9]{3}=[0-9]{4}" required>
+
+        <br><br>
+        <!--To create Birthdate-->
+        <label for="bday">Birthdate</label>
+        <input type="date" id="bday" required>
+
+        <br><br>
+        <!--To create title using radio button-->
+        <label for="Title">Title:</label>
+
+        <label for="Mr.">Mr:</label>
+        <input type="radio" id="Mr." value="Mr." name="title">
+
+        <label for="Ms.">Ms:</label>
+        <input type="radio" id="Ms." value="Ms." name="title">
+
+        <label for="None">Not to say</label>
+        <input type="radio" id="None" value="Not to say" name="title">
+
+        <br><br>
+        <!-- To create payment method via select method-->
+        <label for="payment"> Payment </label>
+        <select id="payment">
+            <option value="visa">Visa</option>
+            <option value="mastercard">Mastercard</option>
+            <option value="cash">Cash</option>
+            <option value="gcash" selected>G-Cash</option>
+            <option value="maya">Maya</option>
+        </select>
+
+        <br><br>
+
+        <!--To create checkbox-->
+        <label for="show">Show Profile</label>
+        <input type="checkbox" id="show">
+
+        <br><br>
+        <!--To create Commentbox-->
+        <label for="comment">Comment:</label>
+        <textarea id="comment" rows="3" cols="20"></textarea>
+
+        <br><br>
+        <!--To create which file wants to upload with restriction-->
+        <label for="file">Photo:</label>
+        <input type="file" id="file" accept="image/png, image/jpeg">
+
+        <!--buttons-->
+        <input type="reset">
+        <input type="submit">
+    </form>
+</body>
+</html>
