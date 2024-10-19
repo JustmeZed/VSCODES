@@ -1,0 +1,218 @@
+
+/* Global box-sizing setting */
+* {
+    box-sizing: border-box; /* Ensures padding and border are included in total width and height */
+}
+
+/* Body styles */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 20px; 
+    background: url(bg2.jpg); 
+    background-size: cover;
+    background-position: center;
+}
+
+/* Container for the form */
+.container {
+    max-width: 600px; 
+    margin: 0 auto;
+    padding: 20px; 
+    background-color: transparent; 
+    backdrop-filter: blur(50px);
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+}
+
+/* Heading styles */
+h2 {
+    text-align: center; 
+    margin-bottom: 20px; 
+    font-size: 32px; 
+}
+
+/* Header container styles */
+.header-container {
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    padding: 5px; 
+    color: white;
+
+}
+
+
+/* Title styles */
+.title {
+    font-size: 36px;
+    text-align: center; 
+    margin: 0;
+}
+
+/* Row styles for form fields */
+.row {
+    display: flex; 
+    flex-wrap: wrap; 
+    margin-bottom: 15px; 
+}
+
+/* Column styles for form fields */
+.column {
+    flex: 1; 
+    min-width: 150px;
+    padding: 5px; 
+}
+
+/* Label styles */
+label {
+    display: block; 
+    margin-bottom: 5px;
+    color: white;
+}
+
+/* Styles for required field indicator */
+.required {
+    color: red; 
+}
+
+/* Input styles */
+input[type="text"],
+input[type="date"],
+input[type="email"],
+select,
+input[type="file"] {
+    width: 100%; /* Full width for input fields */
+    padding: 8px; /* Padding inside input fields */
+    border: 1px solid #ccc; /* Border around input fields */
+    border-radius: 4px; /* Rounded corners for input fields */
+    font-size: 14px; /* Font size for input text */
+    background: transparent;
+    color: white;;
+}
+
+/* Radio button styles */
+input[type="radio"] {
+    margin-right: 5px; 
+}
+
+/*To Transform the logo of date into white*/
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    cursor: pointer;
+}
+
+/* Gender options layout */
+.gender-options {
+    display: flex;
+    gap: 10px; 
+    flex-wrap: wrap; 
+    align-items: center; 
+    font-size: 12px; 
+}
+
+/* Button styles */
+button {
+    width: 100%; 
+    padding: 10px 15px; 
+    border: none;
+    border-radius: 4px; 
+    background-color: orangered; 
+    color: white;
+    font-size: 16px; 
+    cursor: pointer;
+}
+
+/* Button hover effect */
+button:hover {
+    color: orangered;
+    background-color: white; 
+}
+
+/* Help text styles */
+.help-text {
+    font-size: 12px; 
+    color: white; 
+}
+
+/* Disabled option styling */
+select option:disabled {
+    color: grey; 
+}
+
+/*To edit the "Dont have an account?"*/
+.container .login-register{
+    font-size: 14.5px;
+    text-align: center;
+    margin: 20px 0 15px;
+    color: white;
+}
+/*To edit the "Register"*/
+.login-register p a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+/*To edit the register when you put your cursor*/
+.login-register a:hover{
+    text-decoration: underline;
+    color: orangered;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For screens smaller than 768px */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px; /* Reduce container padding */
+    }
+
+    h2 {
+        font-size: 28px; /* Reduce heading size */
+    }
+
+    .header-container {
+        flex-direction: column; /* Stack logo and title */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .title {
+        padding-left: 0; /* Remove left padding for small screens */
+        text-align: center; /* Center the title text */
+    }
+
+    .logo img {
+        height: 80px; /* Reduce logo size */
+    }
+
+    .row {
+        flex-direction: column; /* Stack columns vertically */
+    }
+
+    .column {
+        min-width: 100%; /* Make columns take full width */
+    }
+}
+
+/* For screens smaller than 480px */
+@media (max-width: 480px) {
+    body {
+        padding: 10px; /* Reduce body padding */
+    }
+
+    h2 {
+        font-size: 24px; /* Further reduce heading size */
+    }
+
+    .container {
+        padding: 10px; /* Reduce container padding */
+    }
+
+    .logo img {
+        height: 60px; /* Further reduce logo size */
+    }
+}
