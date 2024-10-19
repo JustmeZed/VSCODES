@@ -11,28 +11,33 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url(bg.jpg);
+    background: url(bg2.jpg);
     background-size: cover;
     background-position: center;
 }
 /*To edit the div Main where it is the register box*/
 .Main{
-    width: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    max-width: auto;
     background: transparent;
     border-radius: 12px;
     color: white;
     border: 2px solid rgba(255, 255, 255, .2);
     backdrop-filter: blur(50px);
     padding: 15px;
-    margin: 0 10px;
-    max-height: 100vh;
+    margin: 0px 10px ;
+    max-height: auto;
 }
-/*To edit the heading "Login" */
+/*To edit the heading "Player Registration" */
 .Main h1{
     font-size: 30px;
     text-align: center;
     margin-bottom: 15px;
 }
+
 /*To edit the div class input box*/
 .Main .input-box{
     display: flex;
@@ -58,7 +63,7 @@ body{
 /*To edit the text box and others*/
 .input-box .input-field input{
     width: 100%;
-    height: 100%;
+    height: 45px;
     background: transparent;
     border: 2px solid rgba(255, 255, 255, .2);
     outline: none;
@@ -74,52 +79,24 @@ body{
    
 }
 
-/*To edit the margin of gender*/
+/*To edit the margin of gender section*/
 .Main .gender-details{
     margin: 15px 0;
 }
-/*To edit the size of the gender title*/
-.Main .gender-details .gender-title{
+
+/*To edit the "SEX"*/
+.gender-details .details{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+    margin-left: 3px;
+
     font-size: 14px;
     font-weight: 500;
-    margin-left: 5px;
 }
-/*To edit the gender category*/
-.gender-details .category{
-    display: flex;
-    width: 100%;
-    margin: 5px 0;
-    padding: 5px 0;
-    justify-content: space-around;
-}
-/*to adjust the label*/
-.gender-details .category label{
-    display: flex;
-    align-items: center;
-}
-/*customize radio button appearance*/
-.gender-details .category .dot{
-    height: 18px;
-    width: 18px;
-    background: #2c526f;
-    border-radius: 50%;
-    margin-right: 10px;
-    border: 5px solid transparent;
-}
-/*Radio button state style*/
-/*dot-1.. is the id*/
-/*Checked is a pseudo-class that indicates the the radio button is currently selected by the user*/
-/*"~" is sibling connector. the styles will apply any sibling element of the checked radio buttons*/
-#dot-1:checked ~ .category label .one,
-#dot-2:checked ~ .category label .two,
-#dot-3:checked ~ .category label .three{
-    border-color: #2c526f;
-    background: white;
-}
-
-/*To hide the radio buttons*/ 
-input[type="radio"]{
-    display: none;
+/*To adjust radio button*/
+.gender-details input{
+    margin-left: 8px;
 }
 
 
@@ -127,7 +104,7 @@ input[type="radio"]{
 .Main label{
     display: inline-block;
     font-size: 13px;
-    margin: -10px 0 10px;
+    margin: 10px 0;
     padding: 5px;
 }
 /*To edit the checkbox*/
@@ -137,7 +114,7 @@ input[type="radio"]{
 }
 /*To edit the button*/
 .Main .btn{
-    background: #2c526f;
+    background: orangered;
     width: 100%;
     height: 40px;
     border: none;
@@ -152,7 +129,8 @@ input[type="radio"]{
 
 /*To edit the button when you put your cursor*/
 .Main .btn:hover{
-    color: aqua;
+    color: orangered;
+    background-color: white;
 }
 /*To edit the "Already have an account?"*/
 .Main .login-register{
@@ -169,7 +147,7 @@ input[type="radio"]{
 /*To edit the register when you put your cursor*/
 .login-register a:hover{
     text-decoration: underline;
-    color: aqua;
+    color: orangered;
 }
 /* For the register with*/
 .riw{
@@ -199,7 +177,7 @@ input[type="radio"]{
 }
 /*To hover the icons*/
 .icons ion-icon:hover{
-    color: aqua;
+    color: orangered;
 }
 
 /*To Transform the logo of date into white*/
@@ -212,4 +190,5 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .input-box .input-field.address-field{
     width: 100%;
 }
+
 

@@ -11,7 +11,7 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url(bg.jpg);
+    background: url(bg2.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -74,11 +74,11 @@ body{
 /*To edit the forgot password when you put your cursor*/
 .remember-forgot a:hover{
     text-decoration: underline;
-    color:aqua;
+    color:orangered;
 }
 /*To edit the button*/
 .Main .btn{
-    background: #2c526f;
+    background: orangered;
     width: 100%;
     height: 45px;
     border: none;
@@ -92,7 +92,8 @@ body{
 }
 /*To edit the button when you put your cursor*/
 .Main .btn:hover{
-    color: aqua;
+    color: orangered;
+    background-color: white;
 }
 /*To edit the "Dont have an account?"*/
 .Main .login-register{
@@ -109,7 +110,7 @@ body{
 /*To edit the register when you put your cursor*/
 .login-register a:hover{
     text-decoration: underline;
-    color: aqua;
+    color: orangered;
 }
 /* For the log in with*/
 .liw{
@@ -135,5 +136,5 @@ body{
 }
 /*To hover the icons*/
 .icons ion-icon:hover{
-    color: aqua;
+    color: orangered;
 }

@@ -4,14 +4,16 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale = 1.0">
         <title>Register</title>
-        <link rel="stylesheet" href="regis.css"> 
+        <link rel="stylesheet" href="style.css"> 
     </head>
 
     <body>
         <div class="Main">
             <form action="">
-                <h1>Registration</h1>
-
+                <h1>Player Registration</h1>
+                <div class="header">
+                    <h3>Personal Details</h3>
+                </div>
                 <div class="input-box">
                     <div class="input-field">
                         <span class="details">First Name</span>
@@ -49,13 +51,6 @@
                 </div>
 
                 <div class="input-box">
-                    <div class="input-field address-field">
-                        <span class="details">Address</span>
-                        <input type="text" placeholder="Enter your Full Address" required>
-                    </div>
-                </div>
-
-                <div class="input-box">
                     <div class="input-field">
                         <span class="details">Password</span>
                         <input type="password" placeholder="Enter Password" minlength="6" required>
@@ -69,24 +64,14 @@
 
                 <div class="input-box">
                     <div class="gender-details">
-                        <input type="radio" name="gender" id="dot-1">
-                        <input type="radio" name="gender" id="dot-2">
-                        <input type="radio" name="gender" id="dot-3">
-                        <span class="gender-title">Sex</span>
-                        <div class="category">
-                            <label for="dot-1">
-                                <span class="dot one"></span>
-                                <span class="gender">Male</span>
-                            </label>
-                            <label for="dot-2">
-                                <span class="dot two"></span>
-                                <span class="gender">Female</span>
-                            </label>
-                            <label for="dot-3">
-                                <span class="dot three"></span>
-                                <span class="gender">Prefer not to say</span>
-                            </label>
-                        </div>
+                        
+                        <span class="details">Sex</span>
+                        <input type="radio" id="male" name="gender" value="male" required>
+                        <label for="male">Male</label>
+                        <input type="radio" id="female" name="gender" value="female" required>
+                        <label for="male">Female</label>
+                        <input type="radio" id="non" name="gender" value="prefernottosay" required>
+                        <label for="male">Prefer not to say</label>
                     </div>
 
                 </div>
