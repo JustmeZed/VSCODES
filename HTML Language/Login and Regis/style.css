@@ -10,8 +10,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    background: url(bg2.jpg);
+    padding: 20px; 
+    background: url(bg2.jpg); 
     background-size: cover;
     background-position: center;
 }
@@ -28,7 +28,7 @@ body{
     border: 2px solid rgba(255, 255, 255, .2);
     backdrop-filter: blur(50px);
     padding: 15px;
-    margin: 0px 10px ;
+    margin: 10px 10px ;
     max-height: auto;
 }
 /*To edit the heading "Player Registration" */
@@ -97,6 +97,11 @@ body{
 /*To adjust radio button*/
 .gender-details input{
     margin-left: 8px;
+}
+
+.input-box .input-field .address-field{
+    width: 220%;
+    
 }
 
 
