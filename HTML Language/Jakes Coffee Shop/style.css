@@ -1,5 +1,5 @@
-
-body{
+/* Basic body styling */
+body {
     background-color: #ffffcc;
     color: #330000;
     font-family: 'Verdana';
@@ -7,14 +7,16 @@ body{
     padding: 0;
 }
 
-#container{
+/* Container settings */
+#container {
     margin: 20px auto;
     height: 450px;
     width: 750px;
     border: 3px solid;
 }
 
-#Logo{
+/* Logo styling */
+#Logo {
     font-weight: 500px;
     text-align: center;
     border-bottom-style: solid;
@@ -22,7 +24,8 @@ body{
     background-color: #ccaa66;
 }
 
-#navigation{
+/* Navigation menu styling */
+#navigation {
     background-color: #E8D882;
     width: 130px;
     height: 260px;
@@ -30,14 +33,21 @@ body{
     padding: 10px;
 }
 
-#navigation a.navbar{
+/* Styling for navigation links */
+#navigation a.navbar {
     text-decoration: none;
     display: block;
     padding: 8px 10px;
+    color: blueviolet;
 }
 
+/* Hover effect for navigation links */
+#navigation a.navbar:hover {
+    color: blue;
+}
 
-#content{
+/* Styling for sections */
+.section {
     background-color: #f1e8b0;
     width: 580px;
     height: 260px;
@@ -45,11 +55,19 @@ body{
     float: right;
 }
 
-#Image{
+/* Menu title styling */
+.menutitle {
+    padding: 0;
+    margin: 5px;
+}
+
+/* Float right utility class */
+.floatright {
     float: right;
 }
 
-#footer{
+/* Footer styling */
+#footer {
     clear: both;
     background-color: #ccaa66;
     border-top-style: solid;
@@ -61,7 +79,27 @@ body{
     font-size: 12px;
 }
 
-#footer a{
+/* Footer link styling */
+#footer a {
     text-decoration: underline;
+}
 
+/* Hide all sections by default */
+.section {
+    display: none;
+}
+
+/* Show the home section if no target is specified */
+body:not(:has(:target)) #home {
+    display: block;
+}
+/*A pseudo class*/
+/* Show the targeted section */
+:target {
+    display: block;
+}
+
+/* Hide all other sections when one is targeted */
+:target ~ .section {
+    display: none;
 }
