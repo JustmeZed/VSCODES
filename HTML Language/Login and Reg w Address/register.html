@@ -7,50 +7,183 @@
     <link rel="stylesheet" href="register.css">
 
     <script>
-        // Javascript function for Barangay Data
-        const barangaysByCity = {
-            "Quezon City": [
-                "Barangay Commonwealth", "Barangay Culiat",  "Barangay C.P. Garcia","Barangay Fairview",
-                "Barangay Holy Spirit","Barangay Krus na Ligas","Barangay Payatas", "Barangay U.P. Campus"
-            ],
-            "Makati": [
-                "Barangay Bangkal", "Barangay Carmon", "Barangay Poblacion", "Barangay San Lorenzo",
-                "Barangay San Antonio"
-            ],
-            "Intramuros": [
-                "Barangay 655", "Barangay 656", "Barangay 657", "Barangay 658",
-                "Barangay 659"
-            ],     
-            "Pasig": [
-                "Barangay Bagong Ilog", "Barangay Bambang", "Barangay Caniogan", "Barangay Kalawaan",
-                "Barangay Sumulong"
-            ],
-            "Taguig": [
-                "Barangay Fort Bonifacio","Barangay Central Bicutan ", "Barangay Lower Bicutan", "Barangay Upper Bicutan", 
-                "Barangay Western Bicutan"
-                
-            ],
-
+        // Data mappings for Provinces, Cities, Districts, Barangays, and Postal Codes
+        const citiesByProvince = {
+            "Batanes": ["Basco", "Itbayat", "Ivana", "Mahatao", "Sabtang"],
+            "Cebu": ["Cebu City", "Lapu-Lapu City", "Mandaue City", "Talisay City", "Carcar City"],
+            "Metro Manila": ["Quezon City", "Makati", "Manila", "Pasig", "Taguig"],
+            "Palawan": ["Puerto Princesa", "El Nido", "Coron", "Narra", "Brooke's Point"],
+            "Zambales": ["Olongapo City", "Subic", "Iba", "San Antonio", "Castillejos"]
         };
 
-        // Function to update Barangay dropdown
-        function updateBarangayDropdown() {
+        const districtsByCity = {
+            "Quezon City": ["District 1", "District 2", "District 3", "District 4", "District 5"],
+            "Makati": ["District 1", "District 2", "District 3", "District 4", "District 5"],
+            "Manila": ["District 1", "District 2", "District 3", "District 4", "District 5"],
+            "Pasig": ["District 1", "District 2", "District 3", "District 4", "District 5"],
+            "Taguig": ["District 1", "District 2", "District 3", "District 4", "District 5"],
+            "Cebu City": ["North District", "South District", "West District", "East District", "Central District"],
+            "Lapu-Lapu City": ["District 1", "District 2", "District 3", "District 4", "District 5"],
+            "Mandaue City": ["District 1", "District 2", "District 3", "District 4", "District 5"],
+            "Talisay City": ["District 1", "District 2", "District 3", "District 4", "District 5"],
+            "Carcar City": ["District 1", "District 2", "District 3", "District 4", "District 5"],
+            "Puerto Princesa": ["District 1", "District 2", "District 3", "District 4", "District 5"],
+            "El Nido": ["District 1", "District 2", "District 3", "District 4", "District 5"],
+            "Coron": ["District 1", "District 2", "District 3", "District 4", "District 5"],
+            "Narra": ["District 1", "District 2", "District 3", "District 4", "District 5"],
+            "Brooke's Point": ["District 1", "District 2", "District 3", "District 4", "District 5"],
+            "Olongapo City": ["District 1", "District 2", "District 3", "District 4", "District 5"],
+            "Subic": ["District 1", "District 2", "District 3", "District 4", "District 5"],
+            "Iba": ["District 1", "District 2", "District 3", "District 4", "District 5"],
+            "San Antonio": ["District 1", "District 2", "District 3", "District 4", "District 5"],
+            "Castillejos": ["District 1", "District 2", "District 3", "District 4", "District 5"]
+        };
+
+        const barangaysByDistrict = {
+            "District 1": ["Barangay 1A", "Barangay 1B", "Barangay 1C", "Barangay 1D", "Barangay 1E"],
+            "District 2": ["Barangay 2A", "Barangay 2B", "Barangay 2C", "Barangay 2D", "Barangay 2E"],
+            "District 3": ["Barangay 3A", "Barangay 3B", "Barangay 3C", "Barangay 3D", "Barangay 3E"],
+            "District 4": ["Barangay 4A", "Barangay 4B", "Barangay 4C", "Barangay 4D", "Barangay 4E"],
+            "District 5": ["Barangay 5A", "Barangay 5B", "Barangay 5C", "Barangay 5D", "Barangay 5E"],
+            "North District": ["Barangay N1", "Barangay N2", "Barangay N3", "Barangay N4", "Barangay N5"],
+            "South District": ["Barangay S1", "Barangay S2", "Barangay S3", "Barangay S4", "Barangay S5"],
+            "West District": ["Barangay W1", "Barangay W2", "Barangay W3", "Barangay W4", "Barangay W5"],
+            "East District": ["Barangay E1", "Barangay E2", "Barangay E3", "Barangay E4", "Barangay E5"],
+            "Central District": ["Barangay C1", "Barangay C2", "Barangay C3", "Barangay C4", "Barangay C5"],
+        };
+
+        const postalCodesByBarangay = {
+            "Barangay 1A": "1001",
+            "Barangay 1B": "1002",
+            "Barangay 1C": "1003",
+            "Barangay 1D": "1004",
+            "Barangay 1E": "1005",
+            "Barangay 2A": "1101",
+            "Barangay 2B": "1102",
+            "Barangay 2C": "1103",
+            "Barangay 2D": "1104",
+            "Barangay 2E": "1105",
+            "Barangay 3A": "1201",
+            "Barangay 3B": "1202",
+            "Barangay 3C": "1203",
+            "Barangay 3D": "1204",
+            "Barangay 3E": "1205",
+            "Barangay 4A": "1301",
+            "Barangay 4B": "1302",
+            "Barangay 4C": "1303",
+            "Barangay 4D": "1304",
+            "Barangay 4E": "1305",
+            "Barangay 5A": "1401",
+            "Barangay 5B": "1402",
+            "Barangay 5C": "1403",
+            "Barangay 5D": "1404",
+            "Barangay 5E": "1405",
+            "Barangay N1": "1501",
+            "Barangay N2": "1502",
+            "Barangay N3": "1503",
+            "Barangay N4": "1504",
+            "Barangay N5": "1505",
+            "Barangay S1": "1601",
+            "Barangay S2": "1602",
+            "Barangay S3": "1603",
+            "Barangay S4": "1604",
+            "Barangay S5": "1605",
+            "Barangay W1": "1701",
+            "Barangay W2": "1702",
+            "Barangay W3": "1703",
+            "Barangay W4": "1704",
+            "Barangay W5": "1705",
+            "Barangay E1": "1801",
+            "Barangay E2": "1802",
+            "Barangay E3": "1803",
+            "Barangay E4": "1804",
+            "Barangay E5": "1805",
+            "Barangay C1": "1901",
+            "Barangay C2": "1902",
+            "Barangay C3": "1903",
+            "Barangay C4": "1904",
+            "Barangay C5": "1905"
+        };
+
+        // Function to update City dropdown based on selected Province
+        function updateCityDropdown() {
+            const provinceSelect = document.getElementById('stateProvince');
             const citySelect = document.getElementById('city');
-            const barangaySelect = document.getElementById('barangay');
+            const selectedProvince = provinceSelect.value;
+
+            // Clear existing options
+            citySelect.innerHTML = '<option value="" disabled selected>Select City</option>';
+
+            // Populate City options based on selected Province
+            if (selectedProvince in citiesByProvince) {
+                citiesByProvince[selectedProvince].forEach(city => {
+                    const option = document.createElement('option');
+                    option.value = city;
+                    option.textContent = city;
+                    citySelect.appendChild(option);
+                });
+            }
+
+            // Clear District, Barangay, and Postal Code dropdowns
+            updateDistrictDropdown();
+            updateBarangayDropdown();
+            document.getElementById('postalCode').value = '';
+        }
+
+        // Function to update District dropdown based on selected City
+        function updateDistrictDropdown() {
+            const citySelect = document.getElementById('city');
+            const districtSelect = document.getElementById('district');
             const selectedCity = citySelect.value;
+
+            // Clear existing options
+            districtSelect.innerHTML = '<option value="" disabled selected>Select District</option>';
+
+            // Populate District options based on selected City
+            if (selectedCity in districtsByCity) {
+                districtsByCity[selectedCity].forEach(district => {
+                    const option = document.createElement('option');
+                    option.value = district;
+                    option.textContent = district;
+                    districtSelect.appendChild(option);
+                });
+            }
+
+            // Clear Barangay and Postal Code dropdowns
+            updateBarangayDropdown();
+            document.getElementById('postalCode').value = '';
+        }
+
+        // Function to update Barangay dropdown based on selected District
+        function updateBarangayDropdown() {
+            const districtSelect = document.getElementById('district');
+            const barangaySelect = document.getElementById('barangay');
+            const selectedDistrict = districtSelect.value;
 
             // Clear existing options
             barangaySelect.innerHTML = '<option value="" disabled selected>Select Barangay</option>';
 
-            // Populate Barangay options based on selected City
-            if (selectedCity in barangaysByCity) {
-                barangaysByCity[selectedCity].forEach(barangay => {
+            // Populate Barangay options based on selected District
+            if (selectedDistrict in barangaysByDistrict) {
+                barangaysByDistrict[selectedDistrict].forEach(barangay => {
                     const option = document.createElement('option');
                     option.value = barangay;
                     option.textContent = barangay;
                     barangaySelect.appendChild(option);
                 });
             }
+
+            // Clear Postal Code
+            document.getElementById('postalCode').value = '';
+        }
+
+        // Function to update Postal Code based on selected Barangay
+        function updatePostalCode() {
+            const barangaySelect = document.getElementById('barangay');
+            const selectedBarangay = barangaySelect.value;
+
+            // Update Postal Code based on selected Barangay
+            document.getElementById('postalCode').value = postalCodesByBarangay[selectedBarangay] || '';
         }
     </script>
 
@@ -77,10 +210,9 @@
                 </div>
             </div>
 
-        
             <div class="row">
                 <div class="column">
-                    <label for="fullname">Birthdate <span class="required">*</span></label>
+                    <label for="birthdate">Birthdate <span class="required">*</span></label>
                     <input type="date" id="birthdate" name="birthdate" required>
                 </div>
                 <div class="column">
@@ -91,7 +223,7 @@
                         <input type="radio" id="female" name="gender" value="female" required>
                         <label for="female">Female</label>
                         <input type="radio" id="preferNotToSay" name="gender" value="preferNotToSay" required>
-                        <label for="preferNotToSay">Prefer not to</label>
+                        <label for="preferNotToSay">Not to say</label>
                     </div>
                 </div>
             </div>
@@ -101,54 +233,43 @@
                 <input type="text" id="addressDetails" name="addressDetails" required>
                 <small class="help-text">Street/Subdivision/Village</small>
             </div>
+
             <div class="row">
                 <div class="column">
-                    <select id="stateProvince" name="stateProvince" required>
+                    <select id="stateProvince" name="stateProvince" onchange="updateCityDropdown()" required>
                         <option value="" disabled selected>Select Province</option>
-                        <option value="state1">Batanes</option>
-                        <option value="state2">Cebu</option>
-                        <option value="state3">Metro Manila</option>
-                        <option value="state4">Palawan</option>
-                        <option value="state5">Zambales</option>
+                        <option value="Batanes">Batanes</option>
+                        <option value="Cebu">Cebu</option>
+                        <option value="Metro Manila">Metro Manila</option>
+                        <option value="Palawan">Palawan</option>
+                        <option value="Zambales">Zambales</option>
                     </select>
-                    <small class="help-text">State/Province</small>
+                    <small class="help-text">Province</small>
                 </div>
                 <div class="column">
-                    <select id="city" name="city" required onchange="updateBarangayDropdown()">
+                    <select id="city" name="city" onchange="updateDistrictDropdown()" required>
                         <option value="" disabled selected>Select City</option>
-                        <option value="Quezon City">Quezon City</option>
-                        <option value="Makati">Makati</option>
-                        <option value="Intramuros">Intramuros</option>
-                        <option value="Pasig">Pasig</option>
-                        <option value="Taguig">Taguig</option>
                     </select>
                     <small class="help-text">City</small>
                 </div>
-                <div class="row">
-                    <div class="column">
-                        <select id="district" name="district" required>
-                            <option value="" disabled selected>Select District</option>
-                            <option value="district1">District 1</option>
-                            <option value="district2">District 2</option>
-                            <option value="district1">District 3</option>
-                            <option value="district2">District 4</option>
-                            <option value="district1">District 5</option>
-                        </select>
-                        <small class="help-text">District</small>
-                    </div>
-                    <div class="column">
-                        <select id="barangay" name="barangay" required>
-                            <option value="" disabled selected>Select Barangay</option>
-                            <!-- Barangay options will be populated here -->
-                        </select>
-                        <small class="help-text">Barangay</small>
-                    </div>
-                    <div class="column">
-                        <input type="text" id="postalCode" name="postalCode" required>
-                        <small class="help-text">Postal/Zip Code</small>
-                    </div>
+                <div class="column">
+                    <select id="district" name="district" onchange="updateBarangayDropdown()" required>
+                        <option value="" disabled selected>Select District</option>
+                    </select>
+                    <small class="help-text">District</small>
+                </div>
+                <div class="column">
+                    <select id="barangay" name="barangay" onchange="updatePostalCode()" required>
+                        <option value="" disabled selected>Select Barangay</option>
+                    </select>
+                    <small class="help-text">Barangay</small>
+                </div>
+                <div class="column">
+                    <input type="text" id="postalCode" name="postalCode" readonly required>
+                    <small class="help-text">Postal Code</small>
                 </div>
             </div>
+
             <div class="row">
                 <div class="column">
                     <label for="mobileNumber">Mobile Number <span class="required">*</span></label>
@@ -170,11 +291,9 @@
             </div>
 
             <div class="login-register">
-                <p>Already have an Account? <a href="login.html" class="register-link">Login</a>
-                </p>
+                <p>Already have an Account? <a href="login.html" class="register-link">Login</a></p>
             </div>
         </form>
     </div>
-
 </body>
 </html>

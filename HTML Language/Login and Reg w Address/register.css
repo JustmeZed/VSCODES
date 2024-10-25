@@ -163,6 +163,10 @@ select option:disabled {
     color: orangered;
 }
 
+.column option{
+    color: black;
+}
+
 /* Media Queries for Responsiveness */
 
 /* For screens smaller than 768px */
