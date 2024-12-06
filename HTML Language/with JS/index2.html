@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Event Listener</title>
+  </head>
+  <body>
+    <label for="first-name">First Name:</label>
+    <input type="text" id="fname" name="first-name" value="" /><br />
+
+    <label for="last-name">Last Name:</label>
+    <input type="text" id="lname" name="last-name" value="" /><br />
+
+    <!--Cannot use input type button if it is not in the <form>-->
+    <button id="btn">Submit</button>
+
+    <script>
+      document.getElementById("btn").addEventListener("click", fillup);
+
+      function fillup() {
+        document.getElementById("fname").value = "Zed";
+        document.getElementById("fname").style.background = "#FF0000";
+        document.getElementById("lname").value = "Parcs";
+        document.getElementById("lname").style.background = "#00FF00";
+      }
+    </script>
+  </body>
+</html>
