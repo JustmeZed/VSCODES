@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Event</title>
+  </head>
+  <body>
+    <button ondblclick="myFunction()"> Double-Click me</button>
+    <p id="demo"></p>
+    <p>A function is triggered when the button is double-clicked. The function outputs some text 
+        in the p element with id = "demo"<div class=""></div>
+    </p>
+
+    <script>
+      function myFunction(){
+        document.getElementById("demo").innerHTML = "You clicked me"
+      }
+    </script>
+  </body>
+</html>
