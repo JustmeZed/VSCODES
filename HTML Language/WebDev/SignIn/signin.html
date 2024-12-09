@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="signin.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
     <title>Sign In Page</title>
   </head>
   <body>
@@ -14,14 +18,17 @@
         <form action="#">
           <div class="input-box">
             <input type="textbox" placeholder="Username" required />
+            <i class="bx bxs-user"></i>
           </div>
 
           <div class="input-box">
             <input type="email" placeholder="Enter Email" required />
+            <i class="bx bxs-envelope"></i>
           </div>
 
           <div class="input-box">
             <input type="password" placeholder="Enter Password" required />
+            <i class="bx bxs-lock-alt"></i>
           </div>
 
           <div class="remember-forgot">
@@ -36,6 +43,17 @@
               Don't have an account?
               <a href="register.html" class="register-link">Register</a>
             </p>
+          </div>
+
+          <div class="other-info">
+            <div class="info-item">
+              <i class="bx bxs-phone-call"></i>
+              <p class="number">+63 945365230</p>
+            </div>
+            <div class="info-item">
+              <i class="bx bxs-envelope"></i>
+              <p class="email">davejaek002038@jabe.come</p>
+            </div>
           </div>
         </form>
       </div>

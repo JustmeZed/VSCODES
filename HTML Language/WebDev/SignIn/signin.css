@@ -59,18 +59,27 @@ body {
   width: 365px;
   height: 46px;
   background: var(white);
-  color: var(--text-color);
+  color: var(--bg-color);
   border: none;
   outline: none;
   border: none;
   border-radius: 8px;
-  padding: 20px 45px 20px 20px;
+  padding: 23px 45px 20px 40px;
+  font-size: small;
 }
 
 .input-box input::placeholder {
   color: var(--bg-color);
 }
 
+.input-box i {
+  color: var(--bg-color);
+  position: absolute;
+  left: 10px;
+  top: 48%;
+  transform: translateY(-50%);
+  font-size: 20px;
+}
 .remember-forgot input {
   margin-right: 5px;
 }
@@ -87,10 +96,12 @@ body {
 
 .btn {
   background: var(white);
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  width: 100%;
-  height: 45px;
+  justify-content: center;
+  text-align: center;
+  margin: 1rem auto;
+  display: block;
+  width: 272px;
+  height: 44px;
   border: none;
   outline: none;
   border-radius: 10px;
@@ -114,4 +125,47 @@ body {
   text-decoration: underline;
   color: var(--secondary-bg);
   margin-left: 3px;
+}
+
+.register-link:hover {
+  color: white;
+}
+
+.other-info {
+  margin-top: 3rem;
+  display: flex;
+  gap: 1rem; /* Space between each item */
+}
+
+.info-item {
+  display: flex; /* Align icon and text horizontally */
+  align-items: center; /* Vertically align items */
+  gap: 1rem; /* Add horizontal spacing between icon and text */
+}
+
+.other-info i {
+  color: white;
+  font-size: 20px;
+}
+
+.number,
+.email {
+  color: white;
+  font-size: 14px;
+}
+
+@media (max-width: 1080px) {
+  .Main {
+    width: 90%; /* Adjust width for smaller screens */
+    height: auto;
+    padding: 1rem;
+  }
+
+  .btn {
+    width: 100%; /* Full-width button on small screens */
+  }
+
+  .other-info {
+    flex-direction: column; /* Stack items vertically */
+  }
 }
