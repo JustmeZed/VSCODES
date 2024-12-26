@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Dark Calculator</title>
+  </head>
+  <body>
+    <div class="calculator">
+      <h1>CALCULATOR</h1>
+      <input type="text" id="display" class="display" disabled />
+      <div class="keys-container">
+        <div class="memory-keys">
+          <button class="function" onclick="memoryClear()">MC</button>
+          <button class="function" onclick="memoryRecall()">MR</button>
+          <button class="function" onclick="memoryAdd()">M+</button>
+          <button class="function" onclick="memorySubtract()">M-</button>
+          <button class="function" onclick="memorySave()">MS</button>
+          <button class="function" onclick="memoryShow()">M↓</button>
+        </div>
+        <div class="keys">
+          <button class="function" onclick="clearAll()">C</button>
+          <button class="function" onclick="clearEntry()">CE</button>
+          <button class="function" onclick="calculatePercentage()">%</button>
+          <button class="operator" onclick="backspace()">⌫</button>
+
+          <button class="function" onclick="convertToBinaryMode()">Bin</button>
+          <button class="function" onclick="convertToOctalMode()">Oct</button>
+          <button class="function" onclick="convertToHexMode()">Hex</button>
+          <button class="operator" onclick="setOperator('/')">÷</button>
+
+          <button onclick="appendNumber('7')" class="number">7</button>
+          <button onclick="appendNumber('8')" class="number">8</button>
+          <button onclick="appendNumber('9')" class="number">9</button>
+          <button class="operator" onclick="setOperator('*')">x</button>
+
+          <button onclick="appendNumber('4')" class="number">4</button>
+          <button onclick="appendNumber('5')" class="number">5</button>
+          <button onclick="appendNumber('6')" class="number">6</button>
+          <button class="operator" onclick="setOperator('-')">-</button>
+
+          <button onclick="appendNumber('1')" class="number">1</button>
+          <button onclick="appendNumber('2')" class="number">2</button>
+          <button onclick="appendNumber('3')" class="number">3</button>
+          <button class="operator" onclick="setOperator('+')">+</button>
+
+          <button onclick="appendNumber('0')" class="number">0</button>
+          <button onclick="appendNumber('00')" class="number">00</button>
+          <button onclick="appendPeriod()">.</button>
+          <button class="operator" onclick="calculate()">=</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
