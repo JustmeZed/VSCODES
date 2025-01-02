@@ -23,8 +23,7 @@
         </div>
 
         <div class="secondaryBar">
-            <div class="menu" onclick="showAboutSection()">
-                <i class="fas fa-bars"></i>
+            <div class="menu">
                 <p>Standard</p>
             </div>
         </div>
@@ -44,9 +43,9 @@
         </div>
 
         <div class="keys">
-          <button class="function" onclick="clearAll()">C</button>
-          <button class="function" onclick="clearEntry()">CE</button>
           <button class="function" onclick="calculatePercentage()">%</button>
+          <button class="function" onclick="clearEntry()">CE</button>
+          <button class="function" onclick="clearAll()">C</button>
           <button class="operator" onclick="backspace()">⌫</button>
 
           <button class="function" onclick="convertToBinaryMode()">BIN</button>
@@ -76,21 +75,6 @@
         </div>
 
     </div>
-
-    <!-- About Section -->
-    <div id="about-section" style="display: none;">
-        <div class="about-box">
-            <h2>About This Calculator</h2>
-            <p>
-                This calculator offers a clean interface, supports Binary, Octal, and Hexadecimal conversions.
-            </p>
-            <p>
-                Built using modern web technologies like HTML, CSS, and JavaScript, it ensures a smooth, responsive experience for students and professionals.
-            </p>
-            <button id="close-about" style="margin-top: 10px;">Close</button>
-        </div>
-    </div>
-
     <script src="script.js"></script>
 </body>
 </html>

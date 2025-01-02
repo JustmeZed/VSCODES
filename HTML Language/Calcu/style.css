@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f9f9f9;
+    background-color: darkgrey;
     color: #000;
     display: flex;
     justify-content: center;
@@ -41,10 +41,6 @@ body {
     font-size: 1rem;
 }
 
-.topBar .title i {
-    margin-right: 8px;
-    font-size: 1.2rem;
-}
 
 .icons {
     color: #808080;
@@ -60,7 +56,7 @@ body {
 /* Secondary Bar Styling */
 .secondaryBar {
     display: flex;
-    justify-content: space-between; /* Separate the menu and clock icon */
+    justify-content: space-between; 
     align-items: center;
     padding: 10px 15px; /* Add padding for spacing */
     background-color: white;
@@ -212,83 +208,4 @@ body {
     border-radius: 10px;
     text-align: left;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-.menu-box ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.menu-box li {
-    font-size: 1rem;
-    padding: 10px 0;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    border-bottom: 1px solid #e0e0e0;
-}
-
-.menu-box li:last-child {
-    border-bottom: none;
-}
-
-.menu-box li:hover {
-    background: #f0f0f0;
-}
-
-#close-menu {
-    background-color: #a00000;
-    color: #fff;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 15px;
-    font-size: 1rem;
-    width: 100%;
-    text-align: center;
-}
-
-#close-menu:hover {
-    background-color: #c00000;
-}
-
-/* About Section Styling */
-#about-section {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7); /* Transparent black background */
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
-
-.about-box {
-    background: #fff;
-    color: #000;
-    padding: 20px;
-    width: 90%;
-    max-width: 400px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
-}
-
-#close-about {
-    background-color: #a00000;
-    color: #fff;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-#close-about:hover {
-    background-color: #c00000;
 }
