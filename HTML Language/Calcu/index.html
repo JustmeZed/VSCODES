@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows Calculator</title>
+    <script src="https://kit.fontawesome.com/8ad8ec53a6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="topBar">
+            <div class="title">
+                <i class="fas fa-calculator"></i>
+                <p>Calculator</p>
+            </div>
+            <div class="icons">
+                <i class="far fa-window-minimize" onclick="minimizeCalculator()"></i>
+                <i class="far fa-window-maximize" onclick="toggleEnlargeCalculator()"></i>
+                <i class="fas fa-times" onclick="exitCalculator()"></i>
+            </div>
+        </div>
+
+        <div class="secondaryBar">
+            <div class="menu" onclick="showAboutSection()">
+                <i class="fas fa-bars"></i>
+                <p>Standard</p>
+            </div>
+        </div>
+        
+
+        <div class="input-group">
+            <input type="text" id="display" value="0" disabled>
+        </div>
+
+        <div class="modes">
+          <button class="function" onclick="memoryClear()">MC</button>
+          <button class="function" onclick="memoryRecall()">MR</button>
+          <button class="function" onclick="memoryAdd()">M+</button>
+          <button class="function" onclick="memorySubtract()">M-</button>
+          <button class="function" onclick="memorySave()">MS</button>
+          <button class="function" onclick="memoryShow()">M↓</button>
+        </div>
+
+        <div class="keys">
+          <button class="function" onclick="clearAll()">C</button>
+          <button class="function" onclick="clearEntry()">CE</button>
+          <button class="function" onclick="calculatePercentage()">%</button>
+          <button class="operator" onclick="backspace()">⌫</button>
+
+          <button class="function" onclick="convertToBinaryMode()">BIN</button>
+          <button class="function" onclick="convertToOctalMode()">OCT</button>
+          <button class="function" onclick="convertToHexMode()">HEX</button>
+          <button class="operator" onclick="setOperator('/')">÷</button>
+
+          <button onclick="appendNumber('7')" class="number">7</button>
+          <button onclick="appendNumber('8')" class="number">8</button>
+          <button onclick="appendNumber('9')" class="number">9</button>
+          <button class="operator" onclick="setOperator('*')">x</button>
+
+          <button onclick="appendNumber('4')" class="number">4</button>
+          <button onclick="appendNumber('5')" class="number">5</button>
+          <button onclick="appendNumber('6')" class="number">6</button>
+          <button class="operator" onclick="setOperator('-')">-</button>
+
+          <button onclick="appendNumber('1')" class="number">1</button>
+          <button onclick="appendNumber('2')" class="number">2</button>
+          <button onclick="appendNumber('3')" class="number">3</button>
+          <button class="operator" onclick="setOperator('+')">+</button>
+
+          <button onclick="appendNumber('0')" class="number">0</button>
+          <button onclick="appendNumber('00')" class="number">00</button>
+          <button onclick="appendPeriod()">.</button>
+          <button class="operator" id="equals"onclick="calculate()">=</button>
+        </div>
+
+    </div>
+
+    <!-- About Section -->
+    <div id="about-section" style="display: none;">
+        <div class="about-box">
+            <h2>About This Calculator</h2>
+            <p>
+                This calculator offers a clean interface, supports Binary, Octal, and Hexadecimal conversions.
+            </p>
+            <p>
+                Built using modern web technologies like HTML, CSS, and JavaScript, it ensures a smooth, responsive experience for students and professionals.
+            </p>
+            <button id="close-about" style="margin-top: 10px;">Close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

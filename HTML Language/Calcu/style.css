@@ -1,0 +1,294 @@
+/* Reset and General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Calculator Container */
+.container {
+    width: 400px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Top Bar Styling */
+.topBar {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f9f9;
+    color: #000;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.topBar .title {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.topBar .title i {
+    margin-right: 8px;
+    font-size: 1.2rem;
+}
+
+.icons {
+    color: #808080;
+    display: flex;
+    gap: 10px;
+}
+
+.icons i {
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+/* Secondary Bar Styling */
+.secondaryBar {
+    display: flex;
+    justify-content: space-between; /* Separate the menu and clock icon */
+    align-items: center;
+    padding: 10px 15px; /* Add padding for spacing */
+    background-color: white;
+   
+}
+
+.secondaryBar .menu {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Adds space between the hamburger icon and "Standard" text */
+    cursor: pointer;
+}
+
+.secondaryBar .menu i {
+    font-size: 1.2rem; /* Keeps the hamburger icon size consistent */
+}
+
+.secondaryBar .menu p {
+    font-size: 1rem; /* Styles the "Standard" text */
+    margin: 0;
+}
+
+
+/* Input Display Styling */
+.input-group {
+    background-color: #fff;
+    text-align: right;
+    padding: 20px;
+    font-size: 2.6rem;
+    color: #000;
+}
+
+.input-group input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 2.6rem;
+    text-align: right;
+    background-color: transparent;
+    color: #000;
+}
+
+/* Memory Modes */
+.modes{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    padding: 10px 12px;
+    text-align: center;
+}
+
+ .function{
+    border: none;
+    font-size: 0.9rem;
+    color: #4a4a4a;
+    cursor: pointer;  
+    border-radius: 5px;
+    padding: 12px;
+    cursor: pointer;
+    background-color: white;
+}
+
+ .function:hover {
+    background-color: #e9e9e9;
+}
+
+/* Top Operations Styling */
+.keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+    padding: 6px 12px;
+}
+
+.keys button {
+    font-size: 1rem;
+    background-color: #f1f1f1;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.keys button:hover {
+    background-color: #e9e9e9;
+}
+
+/* Number and Operations Styling */
+.keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+    padding: 6px 12px;
+    background-color: #fff;
+}
+
+.keys button {
+    font-size: 1.2rem;
+    background-color: #f1f1f1;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    padding: 20px;
+    cursor: pointer;
+    height: 60px;
+}
+
+.keys button:hover {
+    background-color: #e9e9e9;
+}
+
+.keys .operator {
+    background-color: #f1f1f1;
+}
+
+#equals{
+    background-color: #a00000;
+    color: #fff;
+    font-weight: bold;
+}
+
+#equals:hover {
+    background-color: #c00000;
+}
+
+#equals.special {
+    font-size: 1.1rem;
+}
+
+/* Menu Overlay Styling */
+#menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.menu-box {
+    background: #fff;
+    color: #000;
+    width: 200px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.menu-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-box li {
+    font-size: 1rem;
+    padding: 10px 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.menu-box li:last-child {
+    border-bottom: none;
+}
+
+.menu-box li:hover {
+    background: #f0f0f0;
+}
+
+#close-menu {
+    background-color: #a00000;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    font-size: 1rem;
+    width: 100%;
+    text-align: center;
+}
+
+#close-menu:hover {
+    background-color: #c00000;
+}
+
+/* About Section Styling */
+#about-section {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Transparent black background */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.about-box {
+    background: #fff;
+    color: #000;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
+
+#close-about {
+    background-color: #a00000;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#close-about:hover {
+    background-color: #c00000;
+}
