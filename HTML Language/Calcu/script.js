@@ -151,14 +151,5 @@ menuOverlay.addEventListener('click', (event) => {
     }
 });
 
-// Show the About Section
-function showAboutSection() {
-    menuOverlay.style.display = 'none'; // Close the menu
-    aboutSection.style.display = 'flex'; // Show the About Section
-}
 
-// Close the About Section
-closeAboutButton.addEventListener('click', () => {
-    aboutSection.style.display = 'none'; // Hide the About Section
-});
 
