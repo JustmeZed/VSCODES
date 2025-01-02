@@ -100,18 +100,6 @@ function convertToHexMode() {
 
 
 const calculatorContainer = document.querySelector('.container');
-const aboutSection = document.getElementById('about-section');
-const closeAboutButton = document.getElementById('close-about');
-
-// Show About Section
-function showAboutSection() {
-    aboutSection.style.display = 'flex'; // Show the about section
-}
-
-// Close About Section
-closeAboutButton.addEventListener('click', () => {
-    aboutSection.style.display = 'none'; // Hide the about section
-});
 
 // Minimize Calculator
 function minimizeCalculator() {
