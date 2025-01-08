@@ -226,3 +226,7 @@ body {
 #equal {
   background-color: red;
 }
+
+#equal:hover {
+  background-color: darkred;
+}
