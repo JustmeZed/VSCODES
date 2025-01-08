@@ -3,56 +3,97 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
     <link rel="stylesheet" href="style.css" />
-    <title>Dark Calculator</title>
   </head>
   <body>
-    <div class="calculator">
-      <h1>CALCULATOR</h1>
-      <input type="text" id="display" class="display" disabled />
-      <div class="keys-container">
-        <div class="memory-keys">
-          <button class="function" onclick="memoryClear()">MC</button>
-          <button class="function" onclick="memoryRecall()">MR</button>
-          <button class="function" onclick="memoryAdd()">M+</button>
-          <button class="function" onclick="memorySubtract()">M-</button>
-          <button class="function" onclick="memorySave()">MS</button>
-          <button class="function" onclick="memoryShow()">M↓</button>
-        </div>
-        <div class="keys">
-          <button class="function" onclick="clearAll()">C</button>
-          <button class="function" onclick="clearEntry()">CE</button>
-          <button class="function" onclick="calculatePercentage()">%</button>
-          <button class="operator" onclick="backspace()">⌫</button>
-
-          <button class="function" onclick="convertToBinaryMode()">Bin</button>
-          <button class="function" onclick="convertToOctalMode()">Oct</button>
-          <button class="function" onclick="convertToHexMode()">Hex</button>
-          <button class="operator" onclick="setOperator('/')">÷</button>
-
-          <button onclick="appendNumber('7')" class="number">7</button>
-          <button onclick="appendNumber('8')" class="number">8</button>
-          <button onclick="appendNumber('9')" class="number">9</button>
-          <button class="operator" onclick="setOperator('*')">x</button>
-
-          <button onclick="appendNumber('4')" class="number">4</button>
-          <button onclick="appendNumber('5')" class="number">5</button>
-          <button onclick="appendNumber('6')" class="number">6</button>
-          <button class="operator" onclick="setOperator('-')">-</button>
-
-          <button onclick="appendNumber('1')" class="number">1</button>
-          <button onclick="appendNumber('2')" class="number">2</button>
-          <button onclick="appendNumber('3')" class="number">3</button>
-          <button class="operator" onclick="setOperator('+')">+</button>
-
-          <button onclick="appendNumber('0')" class="number">0</button>
-          <button onclick="appendNumber('00')" class="number">00</button>
-          <button onclick="appendPeriod()">.</button>
-          <button class="operator" onclick="calculate()">=</button>
+    <div id="calc">
+      <div class="title">
+        <h1>
+          Calculator
+        </h1>
+      </div>
+      <div class="resultbox">
+        <p id="expression">&nbsp;</p>
+        <p id="result">0</p>
+      </div>
+      <br /><br />
+      <div class="memory-buttons">
+        <button class="memory-btn" id="mc">MC</button>
+        <button class="memory-btn" id="mr">MR</button>
+        <button class="memory-btn" id="mplus">M+</button>
+        <button class="memory-btn" id="mminus">M-</button>
+        <button class="memory-btn" id="ms">MS</button>
+        <button class="memory-btn" id="mv">M<sub>v</sub></button>
+      </div>
+      <div id="memoryCoverDiv" class="membox">
+        <div class="row">
+          <div class="memory-value"></div>
+          <div class="memory-hover-buttons"></div>
         </div>
       </div>
-    </div>
 
-    <script src="script.js"></script>
+      <div id="numContainer" class="numbox" style="height: 50vh; width: 29.7vw">
+        <button class="btns symbol" id="percent">%</button>
+        <button class="btns symbol" id="ce">CE</button>
+        <button class="btns symbol" id="c">C</button>
+        <button class="back btns symbol" id="back">
+          <svg
+            fill="#ffffff"
+            height="17px"
+            width="50px"
+            version="1.1"
+            id="Capa_1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 44.18 44.18"
+            xml:space="preserve"
+            stroke="#ffffff"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <g>
+                <path
+                  d="M10.625,5.09L0,22.09l10.625,17H44.18v-34H10.625z M42.18,37.09H11.734l-9.375-15l9.375-15H42.18V37.09z"
+                ></path>
+                <polygon
+                  points="18.887,30.797 26.18,23.504 33.473,30.797 34.887,29.383 27.594,22.09 34.887,14.797 33.473,13.383 26.18,20.676 18.887,13.383 17.473,14.797 24.766,22.09 17.473,29.383 "
+                ></polygon>
+              </g>
+            </g>
+          </svg>
+        </button>
+
+        <button class="btns symbol" id="bin">BIN</button>
+        <button class="btns symbol" id="oct">OCT</button>
+        <button class="btns symbol" id="hex">HEX</button>
+        <button class="btns symbol" id="divide">÷</button>
+
+        <button class="btns" id="nine">9</button>
+        <button class="btns" id="eight">8</button>
+        <button class="btns" id="seven">7</button>
+        <button class="btns symbol" id="multiply">*</button>
+
+        <button class="btns" id="six">6</button>
+        <button class="btns" id="five">5</button>
+        <button class="btns" id="four">4</button>
+        <button class="btns symbol" id="subtract">-</button>
+
+        <button class="btns" id="three">3</button>
+        <button class="btns" id="two">2</button>
+        <button class="btns" id="one">1</button>
+        <button class="btns symbol" id="add">+</button>
+
+        <button class="btns" id="posnega">+/-</button>
+        <button class="btns" id="zero">0</button>
+        <button class="btns" id="decimal">.</button>
+        <button class="btns symbol" id="equal">=</button>
+      </div>
+    <script src="script.js" defer></script>
   </body>
 </html>
