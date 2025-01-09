@@ -10,7 +10,7 @@ body {
 
 #calc {
   background-color: black;
-  height: 83.7vh;
+  height: 84.3vh;
   width: 30vw;
   justify-content: center;
   align-items: center;
@@ -131,7 +131,7 @@ body {
   border-radius: 5px;
   height: 40px;
   width: 90%;
-  margin: 3px;
+  margin: 2.8px;
 }
 
 .memory-btn:hover {
@@ -144,7 +144,7 @@ body {
 }
 
 .memory-btn:disabled:hover {
-  background-color: red;
+  background-color: #ec6d10;
 }
 
 .membox {
@@ -211,9 +211,11 @@ body {
   margin: 3px;
   border-radius: 3px;
   background-color: darkgray;
-  color: white;
+  color: black;
 }
-
+.backbtns symbol svg {
+  fill: black;
+}
 .symbol {
   background-color: gray;
 }
@@ -227,9 +229,9 @@ body {
 }
 
 #equal {
-  background-color: red;
+  background-color: #ec6d10;
 }
 
 #equal:hover {
-  background-color: darkred;
+  background-color: orangered;
 }
