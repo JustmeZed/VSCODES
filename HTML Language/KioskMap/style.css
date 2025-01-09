@@ -1,0 +1,195 @@
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: #f0f0f0;
+  overflow: auto;
+}
+
+
+.full-map {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  min-width: 1360px;
+  min-height: 599px;
+  overflow: hidden;
+}
+
+.font {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.center {
+  text-align: center;
+}
+
+.left {
+  height: 800px;
+  width: 400px;
+  background: linear-gradient(
+    #3776a1, #3776a1
+  );
+  background-size: cover; /* Ensures the image covers the whole area */
+  background-position: center;
+  color: white;
+  overflow: hidden;
+}
+
+.row {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+}
+
+.logo {
+  margin: 0 0 20px 0;
+}
+
+.logo img {
+  width: 70px;
+  height: 45px;
+  text-align: end;
+}
+
+.text h3 {
+  text-align: top;
+  margin-bottom: 0;
+  font-size: 16px;
+  margin-top: 8px;
+}
+
+.head h2 {
+  margin: 5px 0 0 0;
+  border: 0;
+  padding: 0;
+  font-size: 20px;
+}
+
+/* Table styles */
+table {
+  margin-top: 11px;
+}
+
+tr {
+  margin-left: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+td {
+  border-radius: 20px;
+  color: antiquewhite;
+  transition: background-color 0.4s, color 0.7s;
+  width: 48%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.pin {
+  margin-right: 5px;
+}
+
+.pin img {
+  width: 35px;
+  height: 31px;
+}
+
+.loc {
+  display: flex;
+  align-items: center;
+}
+
+.loc p {
+  margin: 0;
+}
+
+.col .loc p {
+  color: white;
+  margin: 0;
+}
+
+.col:hover {
+  background-color: blue;
+  cursor: pointer;
+}
+.col:hover .loc p {
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.layout-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.layout-table td {
+  text-align: center;
+  font-size: 14px;
+  color: white;
+  border: none;
+  text-align: left;
+}
+
+.row.svg {
+  justify-content: end;
+  align-items: end;
+}
+
+.loc p {
+  font-size: 16px;
+}
+
+.right {
+  overflow: hidden;
+  width: 1100px;
+  height: 712px;
+  display: block;
+}
+
+.right img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* MODAL */
+.modal {
+  display: block;
+  position: fixed;
+  background-color: #3776a1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  z-index: 1000;
+  padding: 16px;
+  color: antiquewhite;
+}
+
+.modal-content {
+  text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background-color: darkblue;
+  color: #aaa;
+  font-size: 35px;
+  cursor: pointer;
+  border: 0;
+}
+
+.close:hover {
+  color: white;
+}
+
+.modal-content p {
+  text-align: justify;
+  padding: 0 15px 0 15px;
+}
