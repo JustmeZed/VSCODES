@@ -179,6 +179,7 @@ td {
   top: 8px;
   right: 8px;
   background-color: darkblue;
+  border-radius: 4px;
   color: #aaa;
   font-size: 35px;
   cursor: pointer;
