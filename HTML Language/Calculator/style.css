@@ -5,7 +5,7 @@ body {
   min-height: 100vh;
   margin: 0;
   font-weight: 200;
-  background-color: grey;
+  background-color: darkgrey;
 }
 
 #calc {
@@ -107,7 +107,7 @@ body {
 }
 
 .row:hover {
-  background-color: gray;
+  background-color: #ec6d10;
 }
 
 .memory-buttons {
